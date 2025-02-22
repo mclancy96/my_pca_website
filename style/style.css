@@ -14,12 +14,14 @@ body {
 }
 
 #welcome {
-  /* background-image: url("../img/seattle2.png"); 
-    background-size: cover;
-    background-position: center; */
+  background-image: url("../img/icons/pca-logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge;
   overflow-x: visible;
   width: 100%;
-  top: 2rem;
+  top: 0rem;
 }
 
 .jumbotron {
@@ -43,7 +45,7 @@ body {
 
 #about {
   background-image: linear-gradient(to right, #64755e, #3c442e);
-  color: #b2aea5;
+  color: #d8d6cf;
 }
 
 #contact {
@@ -58,7 +60,7 @@ footer {
 
 .footer-top {
   background-image: url(../img/forest_footer.png);
-  /* background-size: cover; */
+  background-size: cover;
 }
 
 a:hover {
@@ -194,6 +196,6 @@ a:hover {
 }
 
 /* ==========================Scroll Fade 2=============================== */
-.scroll-fade {
+/* .scroll-fade {
   opacity: 0;
-}
+} */
