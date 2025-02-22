@@ -11,6 +11,7 @@ body {
 .btn-dark {
   background-color: #364130;
   color: #dbdae2;
+  -webkit-text-fill-color: #dbdae2;
 }
 
 #welcome {
