@@ -1,12 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>My Personal Website</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <script src="/index.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <title>Portfolio - Mike Clancy</title>
+  <link rel='icon' href='/img/personalLogo.png' type='image/x-icon'>
+  <link rel="stylesheet" href="/style/index.css" type="text/css">
+
 </head>
 
 <body>
-  <h1>Hello World!</h1>
+  <div class="">
+    <div class="">
+      <!-- Page content -->
+      <main role="main" class="">
+        <div class="jumbotron fade-in" id="welcome">
+          <h1 class="position-absolute top-50 start-50 translate-middle text-center display-2 fw-bold fade-in-slower">
+            Hello! I'm Mike Clancy.
+            <br>
+            Welcome to My Development Portfolio!
+            <br>
+            <a href="#about">
+              <button class="btn btn-lg btn-dark mt-5">
+                <h3>Enter</h3>
+              </button>
+            </a>
+          </h1>
+        </div>
+        <!-- About Me -->
+        <section id="about">
+          <div class="container">
+            <div class="scroll-fade py-3">
+              <h2 class="text-center display-4">About me</h2>
+              <div class="fs-3">
+                <div class="container">
+                  <div class="row m-4">
+                    <div class="col-1 text-center">
+                      <%- include('icons/code_icon.html') %>
+                    </div>
+                    <div class="col">
+                      <p>I am a full stack developer proficient in HTML, CSS, Javascript, Bootstrap, Node.js, Git/GitHub, Python, React, MongoDB, and Express.js. </p>
+                    </div>
+                  </div>
+                  <div class="row m-4">
+                    <div class="col-1 text-center">
+                      <%- include('icons/cap_icon.html') %>
+                    </div>
+                    <div class="col">
+                      <p>I have a Bachelor's Degree in Computer Science from Oregon State University, and I have software development experience from interning with Amazon in the Summer of 2022.
+                    </div>
+                  </div>
+                  <div class="row m-4">
+                    <div class="col-1 text-center">
+                      <%- include('icons/business_icon.html') %>
+                    </div>
+                    <div class="col">
+                      <p>In addition to my Computer Science degree, I have earned a Master's Degree in Business Administration as well as a Bachelor's Degree in Biology. While earning these degrees, I lead a volunteer organization for four years.</p>
+                    </div>
+                  </div>
+                  <div class="row m-4">
+                    <div class="col-1 text-center">
+                      <%- include('icons/case_icon.html') %>
+                    </div>
+                    <div class="col">
+                      <p>I am actively seeking a job for software engineering, web development, and/or administrative positions in the Philadelphia, PA area or remote.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects">
+          <div class="container">
+            <div>
+              <h2 class="section-title text-center display-4 scroll-fade">
+                My Projects
+              </h2>
+              <!-- Start Project Row -->
+              <div class="row row-cols-1 row-cols-lg-2 g-4 my-2">
+                <!-- Jam Sessions -->
+                <div class="col">
+                  <div class="card h-100 scroll-fade">
+                    <h3 class="card-header text-center">Jam Sessions</h3>
+                    <div class="card-img-top">
+                      <div class="border border-dark">
+                        <img class="img-fluid" src="/img/jam_sessions.png">
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text fs-5">Jam Sessions was a project that myself and two other students worked on in my computer science capstone class. The website is designed to help musicians find other musicians that wanted to make music together or play together. We had regular scrum meetings and biweekly sprint planning to stay on top of our progress. We used Trello to organize our project. It was built using React on the front end and Node on the backend. We used a relational database for storing data.
+                      </p>
+                    </div>
+                    <div class="d-flex justify-content-evenly card-footer bg-transparent">
+                      <a target="_blank" class="link-dark fs-3" href="https://main.d4jsy7rjakx88.amplifyapp.com/">
+                        Live Site
+                      </a>
+                      <a target="_blank" class="link-dark fs-3" href="https://github.com/ltalkington/cs467_jam_session">
+                        GitHub Source Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Weather Dashboard -->
+                <div class="col">
+                  <div class="card h-100 scroll-fade d-flex">
+                    <h3 class="card-header text-center">Weather Dashboard</h3>
+                    <div class="card-img-top">
+                      <div class="border border-dark">
+                        <img class="img-fluid" src="/img/wdash_scrnsht.png">
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text fs-5">This app was built using React on the front end. It takes the zip code entered in to the form and sends a request to the OpenWeather API. The data returned is formatted and sent to the frontend for publishing.</p>
+                    </div>
+                    <div class="d-flex justify-content-evenly card-footer bg-transparent">
+                      <a target="_blank" class="link-dark fs-3" href="https://weatherdashboard.clancymike.com">
+                        Live Site
+                      </a>
+                      <a target="_blank" class="link-dark fs-3" href="https://github.com/mclancy96/weather-dashboard">
+                        GitHub Source Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Second Row -->
+              <div class="row row-cols-1 row-cols-lg-2 g-4 my-2">
+                <!-- Weather Dashboard -->
+                <div class="col">
+                  <div class="card h-100 scroll-fade d-flex">
+                    <h3 class="card-header text-center">Closing Announcement Generator</h3>
+                    <div class="card-img-top">
+                      <div class="border border-dark">
+                        <img class="img-fluid" src="/img/announce.png">
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text fs-5">This is a simple web app that puts together audio files to create a closing announcement for Target. It is designed to distinguish between when we are closing and when we are closed by playing different announcements.
+                        <br>
+                        Important note: the app is only designed for a closing duration of &lt; 60 minutes as we only play the announcement with around 30 minutes left until close.
+                      </p>
+                    </div>
+                    <div class="d-flex justify-content-evenly card-footer bg-transparent">
+                      <a target="_blank" class="link-dark fs-3" href="https://announcement.mikeandlilli.com/">
+                        Live Site
+                      </a>
+                      <a target="_blank" class="link-dark fs-3" href="https://github.com/mclancy96/closing_announcement">
+                        GitHub Source Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Rep Search-->
+                <div class="col">
+                  <div class="card h-100 scroll-fade d-flex">
+                    <h3 class="card-header text-center">Representative Search</h3>
+                    <div class="card-img-top">
+                      <div class="border border-dark">
+                        <img class="img-fluid" src="/img/repsearch.png">
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text fs-5">This app allows users to search for their local Members of Congress using their zip code. In the event that there are multiple Representatives in a zip code, it will ask for an address to refine the search</p>
+                    </div>
+                    <div class="d-flex justify-content-evenly card-footer bg-transparent">
+                      <a target="_blank" class="link-dark fs-3" href="https://repsearch.clancymike.com">
+                        Live Site
+                      </a>
+                      <a target="_blank" class="link-dark fs-3" href="https://github.com/mclancy96/cs361_individual_project">
+                        GitHub Source Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Third Row -->
+              <div class="row row-cols-1 row-cols-lg-2 g-4 my-2">
+                <!-- Rep Search-->
+                <div class="col">
+                  <div class="card h-100 scroll-fade d-flex">
+                    <h3 class="card-header text-center">College Database</h3>
+                    <div class="card-img-top">
+                      <div class="border border-dark">
+                        <img class="img-fluid" src="/img/database.png">
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text fs-5">I worked on this project in my databases class to simulate some aspects of a college database that would need to be saved to a database. The main focus of the app is the use of SQL and interacting with databases. We used MySql for our database in this case.</p>
+                    </div>
+                    <div class="d-flex justify-content-evenly card-footer bg-transparent">
+                      <a target="_blank" class="link-dark fs-3" href="https://student-database-pn1e.onrender.com">
+                        Live Site
+                      </a>
+                      <a target="_blank" class="link-dark fs-3" href="https://github.com/mclancy96/cs340_database/tree/master">
+                        GitHub Source Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Info -->
+        <section class="scroll-fade">
+          <div class="footer-top">
+            <img class="img-fluid mb-0 pb-0" src="/img/forest_footer.png">
+          </div>
+          <div id="contact">
+            <div class="container text-center p-3 pb-2">
+              <div>
+                <h2>
+                  Contact
+                </h2>
+                <p class="mb-0 pb-2 fs-5">
+                  Please use the following links to reach out if you have any questions!
+                </p>
+                <ul class="list-inline fs-5">
+                  <li class="list-inline-item mx-3">
+                    <a href="https://github.com/mclancy96" class="white-link" target="_blank">
+                      <i class="fab fa-github"></i>
+                      <br> GitHub
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-3">
+                    <a href="mailto:mike@clancymike.com" class="white-link" target="_blank">
+                      <i class="fas fa-envelope-open-text"></i>
+                      <br> Email
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-3">
+                    <a href="https://www.linkedin.com/in/mike-a-clancy/" class="white-link" target="_blank">
+                      <i class="fab fa-linkedin"></i>
+                      <br> LinkedIn
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>
