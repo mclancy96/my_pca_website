@@ -60,7 +60,7 @@ footer {
 
 .footer-top {
   background-image: url(../img/forest_footer.png);
-  background-size: cover;
+  background-size: auto;
 }
 
 a:hover {
